@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>一码通</title>
+<style>
+.demo{
+position:fixed;
+top: 0;
+left: 0;
+width:100%;
+height:100%;
+min-width: 10px;
+z-index:-10;
+zoom: 1;
+background-color: #ededed;
+background: url(002.png);
+background-repeat: no-repeat;
+background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-position: center 0;
+}
+</style>
+</head>
+<body>
+<div class='demo'>
+<span id="span1" style="position: absolute; top: 173px; left: 200px;color:#ffffff;font-size:50px;"><script language="javascript">
+<!--
+age = prompt("请输入你的名字:","吴可欣");
+if (age != null){
+alert("ok!");
+}else{
+alert("你按了[取消]按钮");
+}
+var span1 = document.getElementById("span1");
+span1.innerHTML = age;
+</script></span>
+<span id="span2" style="position: absolute; top: 270px; left: 200px;color:#ffffff;font-size:50px"><script language="javascript">
+<!--
+banji = prompt("请输入你的学院:","环境与安全工程学院");
+if (banji != null){
+alert("ok!");
+}else{
+alert("你按了[取消]按钮");
+}
+var span2 = document.getElementById("span2");
+span2.innerHTML = banji;
+</script></span>
+
+<div id="div1" style="position: absolute; top: 671px; left: 285px;display:inline;font-size:45px;margin:20px,auto;font-family:FZZhongDengXian-Z07S;"></div>
+<script>
+    function time() {
+        var date = new Date();
+        var hour = date.getHours();
+        var month = date.getMonth()+1;
+        var day = date.getDate();
+        function timeAdd0(str) {
+            if(str.length<=1){
+                str='0'+str;
+            }
+            return str
+        }
+        var str =  timeAdd0(month.toString())+ "月" + timeAdd0(day.toString()) + "日&nbsp;" ;
+        var div1 = document.getElementById("div1");
+        div1.style.color="#479249";
+        div1.innerHTML = str;
+    }
+    setInterval(time,1000);
+</script>
+<div id="div3" style="position: absolute; top: 650px; left: 488px;font-size:80px;margin:20px,auto;display:inline;font-family:FZZhongDengXian-Z07S;"></div>
+<script>
+    function time() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds().toString();
+        function timeAdd0(str) {
+            if(str.length<=1){
+                str='0'+str;
+            }
+        return str
+        }
+        var str3 = timeAdd0(seconds) ;
+        var div3= document.getElementById("div3");
+        div3.style.color="#479249";
+        div3.innerHTML = str3;
+    }
+    setInterval(time,1000);
+</script>
+<div id="div2" style="position: absolute; top: 678px; left: 552px;margin:20px,auto;font-size:45px;display:inline;font-family:FZZhongDengXian-Z07S;"></div>
+<script>
+    function time() {
+        var date = new Date();
+        var hour = date.getHours().toString();
+        var minutes = date.getMinutes().toString();
+        var seconds = date.getSeconds();
+        function timeAdd0(str) {
+            if(str.length<=1){
+                str='0'+str;
+            }
+        return str
+        }
+        var str2 = "&nbsp;&nbsp;&nbsp;"+timeAdd0(hour) + ":" + timeAdd0(minutes)+"&nbsp;&nbsp;&nbsp;" ;
+        var div2 = document.getElementById("div2");
+        div2.style.color="#479249";
+        div2.innerHTML = str2;
+    }
+    setInterval(time,1000);
+</script>
+<body>
+<table height=200 width=920">
+<tr>
+<td valign="middle" style="padding-left:60px;padding-top:1100px;">
+<marquee id="gundong" style="color:#479249;font-size:100px;">
+<script language="javascript">
+<!--
+gun = prompt("请输入滚动文字:","博学");
+if (gun != null){
+alert("ok!");
+}else{
+alert("你按了[取消]按钮");
+}
+var txt = document.getElementById("gundong");
+txt.innerHTML = gun;
+</script>
+</marquee>
+</td>
+</tr>
+</table>
+</body>
+</div>
+</body>
+</html>
